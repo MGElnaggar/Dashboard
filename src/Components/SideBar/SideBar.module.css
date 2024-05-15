@@ -1,0 +1,207 @@
+* {
+    background-color: #181818;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins" ,sans-serif;
+}
+
+nav {
+    background-color: #181818;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 760px;
+    left: 0;
+    width: 80px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+@media (max-width:1060px) {
+    nav {
+        height: 810px;
+    }
+}
+
+.logo{
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+    margin: 10px 0 0 10px;
+    width: 180px;
+}
+
+.logo img{
+    width: 48px;
+    height: 34px;
+    transition: all 0.5s ease;
+}
+
+nav:hover .logo img {
+    width: 124px;
+    height: 54px;
+}
+
+a {
+    margin-bottom: 10px;
+    position: relative;
+    display: table;
+    width: 200px;
+    padding: 5px;
+}
+
+a:first-child{
+    margin-bottom: 20px;
+}
+
+.navlinkPartOne svg, .navlinkPartTwo svg{
+    position: relative;
+    left: 20px;
+    top: 14px;
+    text-align: center;
+}
+
+.navlinkPartOne h1, .navlinkPartTwo h1{
+    color: #5D5D5D;
+    font-size: 19px;
+    display: none;
+    position: relative;
+    left: 25px;
+    top: 10px;
+    margin-left: 10px;
+    transition: opacity 1s ease;
+}
+.navlinkPartOne h1{
+    color: #ffffff;
+}
+
+.navlinkPartTwo p{
+    width: 170px;
+    height: 10px;
+    display: none;
+    text-align: center;
+    justify-content: center;
+    background-color: #53ACFF;
+    padding: 0px;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: -20px;
+    filter: blur(25px);
+    -webkit-filter: blur(25px);
+    z-index: 0;
+}
+.navlinkPartTwo span{
+    position: relative;
+    left: 10px;
+    top: 10px;
+    width: 150px;
+    background: transparent;
+    display: none;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    z-index: 9999;
+}
+
+.profile{
+    margin: 10px 0 0 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.profile,
+.profileSvg,
+.profileHeader {
+    display: inline-block;
+}
+
+.profileHeader{
+    display: none;
+    position: relative;
+    left: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profileHeader h2{
+    font-size: 15px;
+    color: #FFFFFF;
+    line-height: 22.5px;
+}
+.profileHeader p{
+    font-size: 13px;
+    color: #FFFFFF;
+    line-height: 19.5px;
+}
+
+.profileFooter{
+    display: none;
+    margin-top: 30px;
+    position: relative;
+    top: -20px;
+}
+.profileFooter h3{
+    font-size: 14px;
+    color: #424242;
+}
+
+
+/* Hover Part */
+
+
+nav:hover .navlinkPartOne h1{
+    display:inline-flex;
+    opacity: 1;
+}
+
+nav:hover .navlinkPartTwo h1{
+    display: inline-flex;
+    opacity: 1;
+}
+
+nav:hover{
+    width: 180px;
+}
+
+li:nth-child(2):hover .navlinkPartOne path {
+    fill: #53ACFF;
+}
+
+li:nth-child(2):hover .navlinkPartOne h1 {
+    color: #53ACFF;
+}
+li:nth-child(3):hover .navlinkPartOne path {
+    fill: #53ACFF;
+}
+
+li:nth-child(3):hover .navlinkPartOne h1 {
+    color: #53ACFF;
+}
+
+.navlinkPartTwo:hover p , .navlinkPartTwo:hover span{
+    display: block;
+}
+
+.navlinkPartTwo:hover svg {
+    display: none;
+}
+nav .navlinkPartTwo:hover h1 {
+    display: none;
+}
+
+nav:hover .profileHeader {
+    display: inline-block;
+    opacity: 1;
+}
+
+nav:hover .profileFooter {
+    display: block;
+    transition: all 1s ease;
+}
